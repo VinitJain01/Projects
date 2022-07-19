@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+</head>
+<body>
+
+<app-header></app-header>
+
+<div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Error!</strong> Wrong input Email or Password . If not registered Click on register.
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+<div class="p-3 mb-2 text-white" style="background-color: rgba(209, 12, 78, 0.918);" >
+  <br>
+<div align="center" class="p-3 mb-2 text-dark" style="background-color:aquamarine" ><h2>Login</h2></div>
+<div align="right">
+    <form #logoutform="ngForm" (ngSubmit)="onClick()">
+      <button type="submit"  class="btn btn-info" style="font-size: medium;" >Register</button>
+    </form>
+  </div>
+  
+  
+<form align="center"  #loginform="ngForm" (ngSubmit)="onSubmit(loginform.value)" > 
+<div align="center" class="form-group">
+<label for="Email">E-mail: </label>
+<div class="col-sm-4">
+<input type="text" class="form-control" aria-describedby="Email" name="uid" placeholder="Enter UserId" ngModel >
+</div>
+</div>
+<br>
+<div align="center" class="form-group">
+<label for="InputPassword1">Password: </label>
+<div class="col-sm-4">
+<input type="password" class="form-control" placeholder="Enter Password" name="password" ngModel>
+</div>
+</div>
+<br>
+
+<button type="submit"  class="btn btn-info" style="font-size: medium;">Login</button>
+</form>
+</div>
+
+
+
+
+<app-footer></app-footer>
+
+
+
+</body>
+</html>
+

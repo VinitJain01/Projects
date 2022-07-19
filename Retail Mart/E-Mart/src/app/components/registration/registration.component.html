@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+
+<app-header></app-header>
+<div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Error!</strong> Re-Password Should be same as Password.
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+<div class="p-3 mb-2 bg-dark text-white">
+<div class="container mt-5">
+<div align="center" class="p-3 mb-2 bg-danger text-white"><h5>Register with your email and password.</h5></div>
+
+<div align="right">
+  <form #logoutform="ngForm" (ngSubmit)="onClick()">
+    <button type="submit" class="btn btn-success">Login</button>
+  </form>
+</div>
+<form align="center"  #registrationform="ngForm" (ngSubmit)="onSubmit(registrationform.value)" > 
+    <div class="form-group">
+    
+        <label for="idusers">E-mail: </label>
+        <input type="email" class="form-control" aria-describedby="Emailid" name="idusers" placeholder="Enter your E-mail" ngModel >
+        <br> 
+          
+    <label for="FirstName">FirstName: </label>
+    <input type="text" class="form-control" aria-describedby="Fname" name="fname" placeholder="Enter FirstName" ngModel >
+     &nbsp; &nbsp;
+    <label for="LastName">LastName: </label>
+    <input type="text" class="form-control" aria-describedby="Lname" name="lname" placeholder="Enter LastName" ngModel >
+    
+    </div>
+    <br>
+    <div align="center" class="form-group">
+    <label for="InputPassword1">Password: </label>
+    <input type="password" class="form-control" placeholder="Enter Password" name="password" ngModel>
+    &nbsp;&nbsp;
+    <label for="InputPassword1">Confirm Password: </label>
+    <input type="password" class="form-control" placeholder="Rewrite Password" name="repassword" ngModel>
+    </div>
+    
+    
+    <button type="submit" class="btn btn-success">Submit</button>
+    </form></div>
+    </div>
+
+    
+
+    <app-footer></app-footer>
+    
+    
+    
+    </body>
+    </html>
+    
+

@@ -1,0 +1,12 @@
+h6{
+    position:fixed;
+    background-color: skyblue;
+    margin:0;
+    text-align: center;
+    color:white;
+    height: 11%;
+    width: 100%;
+    bottom: 5;
+    padding:15px;
+
+}
